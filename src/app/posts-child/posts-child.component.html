@@ -1,0 +1,25 @@
+
+<br/>
+<div class="container">
+<div *ngIf="showSearchPost" >
+    <label for="userPost">Users Post</label>
+     <input type="text" id="userPost"  class="form-control" name="userPost" #userName (keyup)="getPostsByUserName(userName.value)"/> 
+</div>
+
+<form *ngIf="showForm" #form="ngForm" (ngSubmit)="submitForm(form.value)"> 
+    <div class="form-group">
+        <label for="title">Title</label>
+       <input type="text" id="title" class="form-control" name="title" [(ngModel)]="newPost.title"/><br/>    
+       <label for="body">Body</label>
+       <textarea  id="body" class="form-control" name="body" [(ngModel)]="newPost.body" [(ngModel)]="newPost.body" ></textarea><br/>    
+      <input  type="submit" class="btn btn-primary" value="Add a post"/> 
+    </div>
+</form>
+<br/>
+<br/>
+<h1 *ngIf="posts!=null"> Posts:</h1><br/>
+<article *ngFor="let post of posts">
+  <ul><li><h3>{{post.title}}</h3></li>
+  <p>{{post.body}}</p></ul>
+</article>
+</div>

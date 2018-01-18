@@ -1,0 +1,11 @@
+<div class="tab">
+  <button [routerLink]="['allData']" class="tablinks" (click)="getAllUsers()" >AllData</button>
+  <button class="tablinks" [routerLink]="['userData',id]" (click)="this.child.showAll=false" >UserData</button>
+  <button class="tablinks"[routerLink]="['addUser']" (click)="this.child.showAll=false" >AddUser</button>
+</div>
+<router-outlet></router-outlet> 
+<br/>
+
+<app-all-data-users (id)="onUpdateUser($event)" ></app-all-data-users>
+
+

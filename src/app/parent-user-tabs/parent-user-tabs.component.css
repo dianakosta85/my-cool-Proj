@@ -4,7 +4,7 @@ body {font-family: Arial;}
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #7a8ca3;
 }
 
 /* Style the buttons inside the tab */
@@ -37,3 +37,8 @@ body {font-family: Arial;}
     border-top: none;
 }
 
+.boldy{
+
+    font-weight:bold;
+
+}
